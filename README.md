@@ -24,6 +24,7 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pe
 
 ## Estrutura de Dados
 - Formulário de cadastro de usuários.
+```
 nome: {
     type: bd.Sequelize.STRING(30)
 }
@@ -43,8 +44,10 @@ idade: {
 senha: {
     type: bd.Sequelize.STRING(30)
 }
+```
 
 - Formulário para pedir uma doação
+```
 nome: {
     type: banco_de_dados.Sequelize.STRING
 }
@@ -64,5 +67,4 @@ localidade: {
 informacoes: {
     type: banco_de_dados.Sequelize.NUMERIC
 }
-
-
+```
