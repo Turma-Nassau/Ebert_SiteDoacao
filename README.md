@@ -26,11 +26,11 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pe
 - Formulário de cadastro de usuários.
 ```
 nome: {
-    type: bd.Sequelize.STRING(30)
+    type: bd.Sequelize.STRING(20)
 }
 
 sobrenome: {
-    type: bd.Sequelize.STRING(30)
+    type: bd.Sequelize.STRING(20)
 }
 
 email: {
