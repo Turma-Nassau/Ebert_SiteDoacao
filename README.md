@@ -21,3 +21,48 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pe
 
 ## :hourglass_flowing_sand: Status do Projeto
 - Em elaboração.
+
+## Estrutura de Dados
+- Formulário de cadastro de usuários.
+nome: {
+    type: bd.Sequelize.STRING(30)
+}
+
+sobrenome: {
+    type: bd.Sequelize.STRING(30)
+}
+
+email: {
+    type: bd.Sequelize.STRING(50)
+}
+
+idade: {
+    type: bd.Sequelize.NUMERIC(2)
+}
+
+senha: {
+    type: bd.Sequelize.STRING(30)
+}
+
+- Formulário para pedir uma doação
+nome: {
+    type: banco_de_dados.Sequelize.STRING
+}
+
+situacao: {
+    type: banco_de_dados.Sequelize.STRING
+}
+
+necessidade: {
+    type: banco_de_dados.Sequelize.STRING
+}
+
+localidade: {
+    type: banco_de_dados.Sequelize.STRING
+}
+
+informacoes: {
+    type: banco_de_dados.Sequelize.NUMERIC
+}
+
+
