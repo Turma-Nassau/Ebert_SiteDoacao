@@ -46,7 +46,7 @@ senha: {
 }
 ```
 
-- Formulário para pedir uma doação
+- Formulário para solicitar uma doação
 ```
 nome: {
     type: banco_de_dados.Sequelize.STRING
