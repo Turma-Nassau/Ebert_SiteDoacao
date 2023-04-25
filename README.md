@@ -49,22 +49,22 @@ senha: {
 - Formulário para solicitar uma doação
 ```
 nome: {
-    type: banco_de_dados.Sequelize.STRING
+    type: bd.Sequelize.STRING
 }
 
 situacao: {
-    type: banco_de_dados.Sequelize.STRING
+    type: bd.Sequelize.STRING
 }
 
 necessidade: {
-    type: banco_de_dados.Sequelize.STRING
+    type: bd.Sequelize.STRING
 }
 
 localidade: {
-    type: banco_de_dados.Sequelize.STRING
+    type: bd.Sequelize.STRING
 }
 
 informacoes: {
-    type: banco_de_dados.Sequelize.NUMERIC
+    type: bd.Sequelize.NUMERIC
 }
 ```
