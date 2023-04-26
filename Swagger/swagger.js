@@ -6,7 +6,7 @@ const endpointsFiles = ["./server.js"];
 const doc = {
     info:{
         title: "Minha API",
-        description: "CRUD de usuário Uninassau",
+        description: "Documento de do projeto Site Doação",
     },
     host: "localhost: 8000",
     schemes: ["http"],
