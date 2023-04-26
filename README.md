@@ -37,10 +37,6 @@ email: {
     type: bd.Sequelize.STRING(50)
 }
 
-idade: {
-    type: bd.Sequelize.NUMERIC(2)
-}
-
 senha: {
     type: bd.Sequelize.STRING(30)
 }
@@ -65,6 +61,6 @@ localidade: {
 }
 
 informacoes: {
-    type: bd.Sequelize.NUMERIC
+    type: bd.Sequelize.STRING
 }
 ```
