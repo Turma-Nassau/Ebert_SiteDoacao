@@ -6,8 +6,8 @@ const app = express()
 swaggerFile = require("./swagger_document.json"),
     swaggerUi = require("swagger-ui-express");
 
-// Importando rotas de admin e usuário
-    const admin = require("./routes/admin")
+// Importando rotas de usuário
+
     const user = require("./routes/user")
 
 
