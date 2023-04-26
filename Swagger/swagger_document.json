@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minha API",
-    "description": "CRUD de usuário Uninassau",
+    "description": "Documento de do projeto Site Doação",
     "version": "1.0.0"
   },
   "host": "localhost: 8000",
