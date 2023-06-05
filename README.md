@@ -71,6 +71,7 @@ const Estoque = sequelize.define('Estoque', {
 });
 ```
 - Taxa de Ocupação do Espaço Físico
+```
 const Ocupacao = sequelize.define('Ocupacao', {
   id: {
     type: DataTypes.INTEGER,
@@ -92,6 +93,7 @@ const Ocupacao = sequelize.define('Ocupacao', {
 });
 ```
 - Índice de Perda de Produtos
+```
 const Perda = sequelize.define('Perda', {
   id: {
     type: DataTypes.INTEGER,
@@ -115,3 +117,4 @@ const Perda = sequelize.define('Perda', {
     allowNull: false
   }
 });
+```
