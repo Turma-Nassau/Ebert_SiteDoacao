@@ -48,8 +48,8 @@ const TempoEntrega = sequelize.define('TempoEntrega', {
    allowNull: false
  }
 });
-```
 - Número de Produtos em Estoque
+```
 const Estoque = sequelize.define('Estoque', {
   id: {
     type: DataTypes.INTEGER,
@@ -69,7 +69,6 @@ const Estoque = sequelize.define('Estoque', {
     allowNull: false
   }
 });
-```
 - Taxa de Ocupação do Espaço Físico
 ```
 const Ocupacao = sequelize.define('Ocupacao', {
@@ -117,4 +116,4 @@ const Perda = sequelize.define('Perda', {
     allowNull: false
   }
 });
-```
+
