@@ -10,9 +10,9 @@
 ### - Scripts Necessários  
 Para a correta execução do projeto é necessário que se instale os seguintes comandos no terminal:
 ```
-## -npx create-react-app nome_projeto --> Para criar um projeto em React;
-## -npm install axios --> Biblioteca que ajuda a ligar seu projeto em React com sua API;
-## -npm start --> Comando usado para rodar seu projeto em React.
+-npx create-react-app nome_projeto --> Para criar um projeto em React;
+-npm install axios --> Biblioteca que ajuda a ligar seu projeto em React com sua API;
+-npm start --> Comando usado para rodar seu projeto em React.
 
 ```
 
