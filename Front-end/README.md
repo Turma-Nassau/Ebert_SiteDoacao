@@ -10,11 +10,10 @@
 ### - Scripts Necessários  
 Para a correta execução do projeto é necessário que se instale os seguintes comandos no terminal:
 ```
-npx create-react-app nome_projeto
-npm install axios
-npm install -g json-server
-npm start
-npx json-server --port 3001 --watch db.json
+npx create-react-app nome_projeto --> Para criar um projeto em React;
+npm install axios --> Biblioteca que ajuda a ligar seu projeto em React com sua API;
+npm start --> Comando usado para rodar seu projeto em React.
+
 ```
 ### Tecnologias Utilizadas
 <table> 
