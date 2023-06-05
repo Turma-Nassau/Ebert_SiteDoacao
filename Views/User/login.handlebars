@@ -1,0 +1,42 @@
+<div class="container-fluid bg-light py-5">
+
+  <div class="row justify-content-center align-items-center">
+
+    <div class="col-md-6">
+
+      <h1 class="text-center mb-4">StockRotativo</h1>
+
+      <div class="card bg-white shadow-sm p-4">
+
+        <h2 class="mb-4">Acesse sua conta</h2>
+
+        <form action="/user/login" method="post">
+
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-3 mt-3">Acessar</button>
+
+        </form>
+
+        <hr>
+
+        <p class="text-center mb-0">Não tem uma conta? <a href="/user/criarUsuario" class="text-primary">Crie uma agora</a></p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--Lembrar de mudar essa área para que a mesma seja a página pricinpal, além de fazer aparecer a área administrativa apenas se o EAdmin for 1>

@@ -1,0 +1,39 @@
+{{#each erros_produtoEstoque}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Estoque do Material</h3>
+<div class="card">
+    <div class="card-body">
+
+        <form action="/user/produtoEstoque/novo" method="post">
+
+            <div class="form-group">
+                <label for="id">Código:</label>
+                <input type="number" name="id" id="id" placeholder="Insira o código do material" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade" placeholder="Insira a quantidade"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="produto">Descrição:</label>
+                <textarea name="produto" id="produto" placeholder="Insira o nome ou uma descrição do material"
+                    class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="data_atualizacao">Data de entrada:</label>
+                <input type="date" name="data_atualizacao" id="data_atualizacao" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-success mt-4">Adicionar Material</button>
+
+        </form>
+    </div>
+</div>

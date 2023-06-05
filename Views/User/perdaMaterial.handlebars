@@ -1,0 +1,44 @@
+{{#each erros_perdaMaterial}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Perda de Material</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/user/perdaMaterial/novo" method="post">
+
+            <div class="form-group">
+                <label for="id">Código:</label>
+                <input type="number" name="id" id="id" class="form-control" placeholder="Insira o código do material"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade_total">Quantidade Total:</label>
+                <input type="number" name="quantidade_total" id="quantidade_total" class="form-control"
+                    placeholder="Insira a quantidade total anterior" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade_perdida">Quantidade Perdida:</label>
+                <input type="number" name="quantidade_perdida" id="quantidade_perdida" class="form-control"
+                    placeholder="Insira a quantidade perdida" required>
+            </div>
+
+            <div class="form-group">
+                <label for="produto">Descrição:</label>
+                <textarea name="produto" id="produto" class="form-control"
+                    placeholder="Insira uma breve descrição do material" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="data_atualizacao">Data da perda:</label>
+                <input type="date" name="data_atualizacao" id="data_atualizacao" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-success mt-4">Registrar Material Perdido</button>
+        </form>
+    </div>
+</div>

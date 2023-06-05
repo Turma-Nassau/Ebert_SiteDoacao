@@ -1,0 +1,32 @@
+{{#each erros_taxaOcupacao}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Taxa de Ocupação do Setor</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/user/taxaOcupacao/novo" method="post">
+
+            <div class="form-group">
+                <label for="espaco_total">Espaço total:</label>
+                <input type="number" name="espaco_total" id="espaco_total" placeholder="Insira o espaço total do setor"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="espaco_utilizado">Espaço Utilizado:</label>
+                <input type="number" name="espaco_utilizado" id="espaco_utilizado"
+                    placeholder="Insira o espaço utilizado no setor" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="data_atualizacao">Data de criação:</label>
+                <input type="date" name="data_atualizacao" id="data_atualizacao" class="form-control">
+            </div>
+            
+            <button type="submit" class="btn btn-success mt-4">Criar Taxa de Ocupação</button>
+        </form>
+    </div>
+</div>

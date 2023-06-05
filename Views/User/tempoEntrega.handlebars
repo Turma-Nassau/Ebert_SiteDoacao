@@ -1,0 +1,36 @@
+{{#each erros_tempoEntrega}}
+<div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Tempo de Entrega</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/user/tempoEntrega/novo" method="post">
+
+            <div class="form-group">
+                <label for="codigo">Código:</label>
+                <input type="number" name="codigo" id="codigo" placeholder="Insira o código do material" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="produto">Material:</label>
+                <input type="text" name="produto" id="produto" placeholder="Insira o nome ou uma descrição do material"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="data_saida">Data de recebimento:</label>
+                <input type="datetime-local" name="data_saida" id="data_saida" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="data_entrega">Data de entrega:</label>
+                <input type="datetime-local" name="data_entrega" id="data_entrega" class="form-control">
+            </div>
+            
+            <button type="submit" id="enviar" class="btn btn-success mt-4">Registrar nova entrega</button>
+        </form>
+    </div>
+</div>
