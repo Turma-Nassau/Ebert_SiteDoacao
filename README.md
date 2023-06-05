@@ -74,7 +74,7 @@
 </table>
 
 ### Desenvolvedor
-"EuEbertEu"
+"[EuEbertEu](https://github.com/EuEbertEu)"
 
 ### Estrutura de Dados
 
