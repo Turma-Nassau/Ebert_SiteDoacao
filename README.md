@@ -1,9 +1,10 @@
-# Site de Doações
+# StockRotativo
 ## :speech_balloon: Descrição
-Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pessoas fazerem doações.
+Criar um sistema de monitoramento de indicadores de desempenho para o almoxarifado.
 
 ## :computer: Funcionalidades
-- O site terá um cadastro de usuário e após se cadastrar, o usuário será redirecionado para a página principal do site, onde poderá ver o que as pessoas postaram, onde poderão ajudar caso queiram, onde precisam de determinadado tipo de doação e informações sobre as pessoas ou centros de doações. Além disso, quem estiver utilizando o site poderá adicionar novas pessoas ou instituições que necessitam de recursos, além de atualizar e excluir caso desejem.  
+-Monitorar indicadores de desempenho, como tempo de entrega, número de produtos em estoque, taxa de ocupação do espaço físico e índice de perda de produtos.
+-Identificar oportunidades de melhoria e tomar decisões mais informadas.
 ## :computer: Finalidade
 - O referente projeto tem a finalidade de fazer uma ponte entre as pessoas e pessoas que estejam em situação de rua/ONGS/Casas de apoio, para que aja assim uma ajuda por parte das pessoas que se interessarem
 
@@ -13,8 +14,11 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pe
 - JavaScript
 - NodeJS
 
-## :open_file_folder: Possíveis Implementações
-- O projeto poderá ter atualizações futuras.
+## :open_file_folder: Indicadores de Desempenho Monitorados
+- Cálculo de tempo de entrega: diferença entre a data de entrega e a data de saída do produto do almoxarifado, em minutos ou horas.
+- Cálculo do número de produtos em estoque: soma dos produtos disponíveis no almoxarifado.
+- Cálculo da taxa de ocupação do espaço físico: porcentagem do espaço físico utilizado pelo estoque em relação ao espaço total disponível.
+- Cálculo do índice de perda de produtos: porcentagem de produtos que são perdidos em relação ao total de produtos manuseados.
 
 ## :bust_in_silhouette: Desenvolvedor
 [EuEbertEu](https://github.com/EuEbertEu)
@@ -23,44 +27,91 @@ Projeto criado para a matéria de Códigos de Alta Performance Web. Site para pe
 - Em elaboração.
 
 ## Estrutura de Dados
-- Formulário de cadastro de usuários.
+- Tempo de Entrega.
 ```
-nome: {
-    type: bd.Sequelize.STRING(20)
-}
-
-sobrenome: {
-    type: bd.Sequelize.STRING(20)
-}
-
-email: {
-    type: bd.Sequelize.STRING(50)
-}
-
-senha: {
-    type: bd.Sequelize.STRING(30)
-}
+const TempoEntrega = sequelize.define('TempoEntrega', {
+ id: {
+   type: DataTypes.INTEGER,
+   primaryKey: true,
+   autoIncrement: true
+ },
+ produto: {
+   type: DataTypes.STRING,
+   allowNull: false
+ },
+ data_saida: {
+   type: DataTypes.DATE,
+   allowNull: false
+ },
+ data_entrega: {
+   type: DataTypes.FLOAT, // em minutos ou horas
+   allowNull: false
+ }
+});
 ```
-
-- Formulário para solicitar uma doação
+- Número de Produtos em Estoque
+const Estoque = sequelize.define('Estoque', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  produto: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  quantidade: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  data_atualizacao: {
+    type: DataTypes.DATE,
+    allowNull: false
+  }
+});
 ```
-nome: {
-    type: bd.Sequelize.STRING
-}
-
-situacao: {
-    type: bd.Sequelize.STRING
-}
-
-necessidade: {
-    type: bd.Sequelize.STRING
-}
-
-localidade: {
-    type: bd.Sequelize.STRING
-}
-
-informacoes: {
-    type: bd.Sequelize.STRING
-}
+- Taxa de Ocupação do Espaço Físico
+const Ocupacao = sequelize.define('Ocupacao', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  espaco_total: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+  },
+  espaco_utilizado: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+  },
+  data_atualizacao: {
+    type: DataTypes.DATE,
+    allowNull: false
+  }
+});
 ```
+- Índice de Perda de Produtos
+const Perda = sequelize.define('Perda', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  produto: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  quantidade_total: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  quantidade_perdida: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  data_atualizacao: {
+    type: DataTypes.DATE,
+    allowNull: false
+  }
+});
