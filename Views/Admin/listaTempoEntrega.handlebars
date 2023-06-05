@@ -1,0 +1,30 @@
+<h3>Lista de Todas as Entregas</h3>
+<hr>
+
+{{#each tempoEntrega}}
+<div class="card mt-4">
+    <div class="card-body ">
+       
+        <h4>Código:{{ codigo}}</h4>
+        <p>Produto: {{ produto}}</p>
+        <p>data de recebimento: {{#formatDate data_saida}}{{/formatDate}}</p>
+        <p>data de entrega: {{#formatDate data_entrega}}{{/formatDate}}</p>
+
+
+        <p>Data: {{#formatDate createdAt}}{{/formatDate}}</p>
+        <form action='/admin/listaTempoEntrega/deletar' method="post">
+
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit" class="btn btn-danger">Deletar Tempo de entrega</button>
+
+            <a href="/admin/listaTempoEntrega/editar:id"><button class="bnt bnt-success">Editar categoria</button></a>
+        </form>
+    </div>
+
+
+</div>
+
+{{else}}
+
+
+{{/each}}
