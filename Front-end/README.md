@@ -15,7 +15,7 @@ npm install axios
 npm install -g json-server
 npm start
 npx json-server --port 3001 --watch db.json
-
+```
 ### Tecnologias Utilizadas
 <table> 
   
